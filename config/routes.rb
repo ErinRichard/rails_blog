@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # this replaces the two gets. resources maps all of the conventional routes for
   # a collection of resources
-  resources :articles
+  resources :articles do
   # get "/articles", to: "articles#index"
   # get "articles/:id", to: "articles#show"
+    resources :comments
+  end
 end
